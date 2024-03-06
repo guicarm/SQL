@@ -1,0 +1,14 @@
+SET SERVEROUTPUT ON;
+-- LOOP DE PÓS-CONDIÇÃO
+DECLARE
+    V_INI NUMBER(2) :=1;
+    V_FIM NUMBER(2) := &DIGITE_UM_NUMERO;
+BEGIN
+    LOOP
+        --INSTRUÇÕES
+        DBMS_OUTPUT.PUT_LINE(V_INI);
+        V_INI :=V_INI + 1;
+        --CONDIÇÃO
+        EXIT WHEN (V_INI > V_FIM);
+    END LOOP ;
+END;
